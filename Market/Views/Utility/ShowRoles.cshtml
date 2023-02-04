@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Assign Roles";
+}
+<form action="ChangeRoles">
+    <input type="hidden" name="id" value=@ViewBag.userId />
+    <label>Roles in</label>
+    <select name="rolesToRemove" asp-items="ViewBag.userRoles"></select>
+    <label>Roles out</label>
+    <select name="rolesToAdd" asp-items="ViewBag.userNotInRoles"></select>
+    <input value="Add" type="submit"/>
+</form>
